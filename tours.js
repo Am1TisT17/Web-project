@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cityInput = document.getElementById("city-input");
     const cityButtons = document.querySelectorAll(".city-btn");
 
-    // Fetch weather data
+
     async function fetchWeather(city = "London") {
         try {
             const apiKey = "872e0624c57589a77e909895cce49332"; // Replace with your API key

@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem("darkMode", isDark ? "enabled" : "disabled");
         });
 
-        // Apply saved theme on page load
+        // Применение сохраненной темы
         if (localStorage.getItem("darkMode") === "enabled") {
             document.body.classList.add("dark-mode");
         }
