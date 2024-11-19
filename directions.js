@@ -131,12 +131,13 @@ function validateForm() {
         return;
     }
 
+    // Save selected country and city to localStorage
     localStorage.setItem('selectedCountry', country);
     localStorage.setItem('selectedCity', city);
 
     message.textContent = `I found tours for your requirements in ${city}, ${country} for ${nights} nights on ${date}.`;
 
-    displayTourDetails(city);
+    displayTourDetails(city); // Display tour details for the selected city
     window.location.href = 'tours.html';
 }
 

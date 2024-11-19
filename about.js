@@ -30,7 +30,7 @@ document.getElementById('randomFactBtn').addEventListener('click', function() {
     document.getElementById('randomFact').textContent = randomFact;
 });
 
-
+// Generate Testimonials
 const testimonials = [
     { text: "Global Travels made our dream vacation possible! Highly recommend.", author: "Shaidullin Alibek" },
     { text: "Best travel agency! Everything was smooth and well-planned.", author: "Umarova Adiya" },
@@ -48,6 +48,7 @@ testimonials.forEach(testimonial => {
     testimonialsContainer.appendChild(card);
 });
 
+// Display Date and Time
 function updateDateTime() {
     let now = new Date();
     document.getElementById('dateTime').innerText = now.toLocaleString();
@@ -55,7 +56,7 @@ function updateDateTime() {
 
 setInterval(updateDateTime, 1000);
 
-
+// Subscription Popup
 document.getElementById('subscribeBtn').addEventListener('click', function() {
     document.getElementById('popupForm').style.display = 'block';
 });
@@ -64,7 +65,7 @@ function closePopup() {
     document.getElementById('popupForm').style.display = 'none';
 }
 
-
+// Добавляем новый код для обработки подписки
 document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault();
     const email = document.getElementById('popupEmail').value;
@@ -89,9 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.classList.add('dark-mode');
             }
 
+            // Обработчик переключения темы
             document.getElementById('themeToggleBtn').addEventListener('click', () => {
                 document.body.classList.toggle('dark-mode');
-
+                
+                // Сохранение текущей темы в localStorage
                 const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
                 localStorage.setItem('theme', theme);
             });

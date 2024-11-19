@@ -155,3 +155,49 @@ window.onload = function() {
         loginBtn.textContent = 'Logout';
     }
 };
+// Функция для отображения формы регистрации
+function showRegisterForm() {
+    document.getElementById("registerPrompt").style.display = "none";
+    document.getElementById("registerForm").style.display = "block";
+}
+
+// Функция для регистрации
+function register() {
+    const username = document.getElementById("regUsername").value;
+    const password = document.getElementById("regPassword").value;
+    const confirmPassword = document.getElementById("regConfirmPassword").value;
+
+    if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+    }
+
+    // Здесь можно добавить обработку регистрации, например, отправку данных на сервер
+    alert("Registration successful! Please log in.");
+    document.getElementById("registerForm").style.display = "none";
+}
+
+// Функция для входа
+function login() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    // Проверка логина (например, с сервером)
+    if (username && password) {
+        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("userProfile").style.display = "flex";
+        document.getElementById("userName").textContent = username;
+
+        // Убираем кнопку "Login"
+        document.getElementById("loginBtn").style.display = "none";
+    } else {
+        alert("Please enter a valid username and password.");
+    }
+}
+
+// Функция для выхода
+function logout() {
+    document.getElementById("userProfile").style.display = "none";
+    document.getElementById("loginBtn").style.display = "block";
+    alert("You have logged out successfully.");
+}

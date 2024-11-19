@@ -12,6 +12,7 @@ h1 {
     margin: 0;
     font-size: 45px;
 }
+
 .dark-mode {
     background-color: #121212;
     color: #ffffff;
@@ -26,32 +27,67 @@ h1 {
     color: #000000 !important;
 }
 
-.dark-mode .navbar, .dark-mode footer {
+.dark-mode .navbar, .dark-mode header, .dark-mode footer {
     background-color: #222222 !important;
 }
 .dark-mode .nav-link {
     color: #ffffff !important;
 }
 
-.navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: white;
-    left: 50%;
-    bottom: -5px;
-    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-}
-.navbar-links {
-    left: 50%;
-    transform: translateX(-50%);
+
+/* Центрирует навигационные ссылки и распределяет кнопки по краям */
+.navbar-center {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
 }
 
+/* Стили для ul в центре */
+.navbar-center .navbar-nav {
+  display: flex;
+  gap: 15px;
+}
+
+/* Стили для ссылок */
+.nav-link {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+        
+.navbar-center {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+
+#themeToggleBtn {
+    margin-right: auto;
+}
+
+#loginBtn {
+    margin-left: auto;
+}
+#loginBtn {
+    background-color: transparent; 
+    padding: 15px 30px; /* Пространство внутри кнопки */
+    border: 2px solid transparent;
+}
+#loginBtn:hover {
+    border: 2px solid transparent !important;
+    border-color: transparent !important;
+}
+
+#loginBtn:focus {
+    outline: none; /* Убирает синие границы */
+    box-shadow: none; /* Убирает дополнительные тени, если есть */
+}
 .navbar-nav .nav-link {
     font-size: 1.1rem;
     color: #007bff;
-    font-weight: 400;
+    font-weight: 400; /* Уменьшено до 400, чтобы убрать жирный шрифт */
     position: relative;
 }
 
@@ -63,32 +99,20 @@ h1 {
     color: #0056b3;
 }
 
-#themeToggleBtn {
-    position: relative;
-    margin-right: 20px;
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease-in-out;
 }
 
-.navbar-center {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
+.navbar-collapse {
+    justify-content: center;
 }
-
-
-.navbar-center .navbar-nav {
-  display: flex;
-  gap: 15px;
-}
-
-
-.nav-link {
-  color: white;
-  font-size: 16px;
-  text-decoration: none;
-}
-
-
-
 .btn-placeholder {
   width: 85px;
   height: 38px;

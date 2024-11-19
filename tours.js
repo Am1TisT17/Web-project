@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cityInput = document.getElementById("city-input");
     const cityButtons = document.querySelectorAll(".city-btn");
 
+    // Fetch weather data
     async function fetchWeather(city = "London") {
         try {
             const apiKey = "872e0624c57589a77e909895cce49332"; // Replace with your API key
@@ -40,8 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Default weather data
     fetchWeather();
 
+    // Form submission handler
     weatherForm.addEventListener("submit", (event) => {
         event.preventDefault();
         const city = cityInput.value.trim();
@@ -51,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-
+    // Button click handler for predefined cities
     cityButtons.forEach((button) => {
         button.addEventListener("click", () => {
             const city = button.getAttribute("data-city");

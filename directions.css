@@ -45,7 +45,7 @@ body {
 .nav a:hover::before {
     width: 100%;
 }
-
+/* Адаптивность для мобильных экранов (менее 768px) */
 @media (max-width: 767px) {
     .header h1 {
         font-size: 1.5rem;
@@ -86,7 +86,7 @@ body {
     border-radius: 5px;
 }
 
-
+/* Стили для кнопок Find Directions и Reset */
 #submit-button,
 #reset-button {
     font-size: 1.1rem;
@@ -105,7 +105,7 @@ body {
     background-color: #1e88e5;
 }
 
-
+/* Стиль для кнопки Change Background Color */
 #change-bg-button {
     font-size: 1.1rem;
     background-color: #42a5f5;
@@ -124,7 +124,7 @@ body {
     background-color: #1e88e5;
 }
 
-
+/* Стиль для кнопки Dark Mode */
 #themeToggleBtn {
     background-color: #007bff;
     color: #fff;
@@ -175,7 +175,7 @@ footer {
     color: #ffffff;
 }
 
-
+/* Темный стиль для кнопок */
 .dark-mode #submit-button,
 .dark-mode #reset-button,
 .dark-mode #change-bg-button,

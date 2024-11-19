@@ -19,7 +19,7 @@ h1 {
         .dark-mode .bg-light {
             background-color: #333333 !important;
         }
-        .dark-mode .navbar, .dark-mode footer {
+        .dark-mode .navbar, .dark-mode header, .dark-mode footer {
             background-color: #222222 !important;
         }
         .dark-mode .nav-link {
@@ -209,6 +209,35 @@ h3 {
     cursor: pointer;
     color: black;
 }
+
+.register-prompt {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-profile span {
+    color: black; /* Черный текст для светлой темы */
+}
+
+
+/* Никнейм для темной темы */
+body.dark-mode .user-profile span {
+    color: white; /* Белый текст для темной темы */
+}
+
+
+.user-profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
 
 .black-label {
     color: black;
